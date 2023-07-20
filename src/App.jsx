@@ -1,35 +1,52 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import React from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [answer, setAnswer] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="main">
+      <div className="line1">Expression</div>
+
+      <div className="line2">Ans</div>
+
+      <div className="line3">
+        <div className="">C</div>
+        <div className="">+/-</div>
+        <div className="">%</div>
+        <div className="">/</div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className="line4">
+        <div className="">7</div>
+        <div className="">8</div>
+        <div className="">9</div>
+        <div className="">X</div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      <div className="line5">
+        <div className="">4</div>
+        <div className="">5</div>
+        <div className="">6</div>
+        <div className="">-</div>
+      </div>
+
+      <div className="line6">
+        <div className="">1</div>
+        <div className="">2</div>
+        <div className="">3</div>
+        <div>+</div>
+      </div>
+
+      <div className="line7">
+        <div className="">0</div>
+        <div className="">.</div>
+        <div className="">Ans</div>
+        <div className="">=</div>
+      </div>
+    </div>
+  );
 }
 
 export default App
