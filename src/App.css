@@ -6,19 +6,22 @@
   display: flex;
   flex-direction: column;
   border: 2px solid #64748b;
-  /* margin: 0px 470px 0px 470px; */
   align-items: center;
   width: fit-content;
 }
 
 .exp{
-  outline: none;
-  border: none;
-  width: 98%;
+  width: 94%;
+  padding: 5px 2px 2px 2px;
   display: flex;
   justify-content: end;
-  height: 40px;
+  border: none;
   border-bottom: 2px solid black;
+  text-align: right;
+}
+
+.exp:focus{
+  outline: none;
 }
 
 .ans{
@@ -27,6 +30,10 @@
   justify-content: space-around;
   margin: 10px;
   width: 100%;
+}
+
+.finalAnswer{
+  font-size: 30px;
 }
 
 .line{
