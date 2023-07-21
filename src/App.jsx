@@ -1,52 +1,64 @@
-import { useState } from 'react'
-import './App.css'
-import React from 'react'
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
   const [answer, setAnswer] = useState(0);
+  const [isClear, setIsClear] = useState(false);
+  const [expression, setExpression] = useState("");
+  const [tempAns, setTempAns] = useState(0);
+
+  const clearScreen  = ()=>{
+    if (! isClear){
+      setIsClear(true);
+    }
+  }
 
   return (
     <div className="main">
-      <div className="line1">Expression</div>
-
-      <div className="line2">Ans</div>
-
-      <div className="line3">
-        <div className="">C</div>
-        <div className="">+/-</div>
-        <div className="">%</div>
-        <div className="">/</div>
+      <div className="exp">{expression}</div>
+      <div className="ans">
+        <div>Ans</div>
+        <div></div>
+        {isClear ? <></>: <div className="finalAnswer">2344</div>}
+        
       </div>
 
-      <div className="line4">
-        <div className="">7</div>
-        <div className="">8</div>
-        <div className="">9</div>
-        <div className="">X</div>
+      <div className="line">
+        <div className="a" onClick={()=>{clearScreen()}}>C</div>
+        <div className="a">+/-</div>
+        <div className="a">%</div>
+        <div className="a">÷</div>
       </div>
 
-      <div className="line5">
-        <div className="">4</div>
-        <div className="">5</div>
-        <div className="">6</div>
-        <div className="">-</div>
+      <div className="line">
+        <div className="a">7</div>
+        <div className="a">8</div>
+        <div className="a">9</div>
+        <div className="a">X</div>
       </div>
 
-      <div className="line6">
-        <div className="">1</div>
-        <div className="">2</div>
-        <div className="">3</div>
-        <div>+</div>
+      <div className="line">
+        <div className="a">4</div>
+        <div className="a">5</div>
+        <div className="a">6</div>
+        <div className="a">-</div>
       </div>
 
-      <div className="line7">
-        <div className="">0</div>
-        <div className="">.</div>
-        <div className="">Ans</div>
-        <div className="">=</div>
+      <div className="line">
+        <div className="a">1</div>
+        <div className="a">2</div>
+        <div className="a">3</div>
+        <div className="a">+</div>
+      </div>
+
+      <div className="line1">
+        <div className="a">0</div>
+        <div className="a">.</div>
+        <div className="a">Ans</div>
+        <div className="a">=</div>
       </div>
     </div>
   );
 }
 
-export default App
+export default App;
