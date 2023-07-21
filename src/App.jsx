@@ -37,34 +37,10 @@ function App() {
       </div>
 
       <div className="line">
-        <div
-          className="a"
-          onClick={() => {
-            clearScreen();
-          }}
-        >
-          C
-        </div>
-        <div
-          className="a"
-          onClick={() => {
-            changeToNegative();
-          }}
-        >
-          +/-
-        </div>
-        <div className="a" id="%" onClick={() => setTempAns(tempAns / 100)}>
-          %
-        </div>
-        <div
-          className="a"
-          id="/"
-          onClick={(e) => {
-            changeSign(e);
-          }}
-        >
-          ÷
-        </div>
+        <div className="a" onClick={() => {clearScreen();}}>C</div>
+        <div className="a" onClick={() => {changeToNegative();}}>+/-</div>
+        <div className="a" id="%" onClick={() => setTempAns(tempAns / 100)}>%</div>
+        <div className="a" id="/"onClick={(e) => {changeSign(e);}}>÷</div>
       </div>
 
       <div className="line">
