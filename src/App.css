@@ -12,7 +12,7 @@
 
 .exp{
   width: 94%;
-  padding: 5px 2px 2px 2px;
+  padding: 15px 2px 2px 2px;
   display: flex;
   justify-content: end;
   border: none;
@@ -22,6 +22,7 @@
 
 .exp:focus{
   outline: none;
+  border-color:#64748b
 }
 
 .ans{
