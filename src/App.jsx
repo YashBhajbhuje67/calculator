@@ -29,7 +29,10 @@ function App() {
       setExpression(expression + key);
     } else if (key === 'Enter' || key=== "=" ) {
       calc();
-    } else {
+    } else if(key === 'Escape'){
+      clearScreen();
+    }
+    else {
       e.preventDefault();
     }
   }
